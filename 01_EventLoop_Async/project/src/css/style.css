@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#addOrderBtn {
+    padding: 10px 15px;
+    background-color: #349678;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#addOrderBtn:hover {
+    background-color: #167252;
+}
+
+#orderList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#orderList li {
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #e4be7331;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.order-count {
+    margin: 10px 0;
+    font-style: italic;
+    color: #666;
+}
