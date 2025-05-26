@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/home.css">
+    <link rel="shortcut icon" href="src/assets/icons8-space-32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Home</title>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <a href="#">devspace<span>⭐</span></a>
+        </div>
+
+        <div class="navigation-group icon-wrapper">
+            <button> <i class="fa-regular fa-message"></i></button>
+            <button> <i class="fa-regular fa-bell"></i></button>  
+            <button type="button" onclick="logOut()">
+                <i class="fa-solid fa-right-from-bracket active"></i>
+            </button>            
+        </div>
+    </header>
+
+
+    <main>
+        <section class="welcome">
+            <h1>Welcome!</h1>
+            <p id="profile-name"></p>
+        </section>
+
+         <section class="content-container">
+            <div class="gif-grid gif-item">                
+                <img src="src/assets/farol.gif" alt="farol">
+                <img src="src/assets/nature.gif" alt="nature">
+                <img src="src/assets/palero.gif" alt="paloma">
+                <img src="https://i.pinimg.com/originals/a7/20/c1/a720c1a4d1998aa2e375a3bbf6da068c.gif" alt="">
+                <img src="https://i.pinimg.com/originals/c2/ea/ce/c2eace5d77c3231f18bef706606ebd8f.gif" alt="">
+                <img src="https://i.pinimg.com/originals/c0/78/2d/c0782de51bd9ebc773c1ea933a896f86.gif" alt="">
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer-container">
+       <a href="https://github.com/yuleiditho" class="fa-brands fa-github" target="_blank"></a></li>
+    </footer>
+</body>
+    <script src="src/validation/home.js"></script>
+</html>
