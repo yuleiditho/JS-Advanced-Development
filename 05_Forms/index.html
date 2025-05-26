@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Eventos</title>
+    <link rel="shortcut icon" href="src/assets/icons8-space-32.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="banner">
+            <img src="https://images.pexels.com/photos/3321796/pexels-photo-3321796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Event Banner">
+        </div>
+        <div class="form-container">
+            <h2>Registro de Eventos</h2>
+            <form id="registroEvento">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="nombre">Edad:</label>
+                <input type="number" id="age" name="age" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label>Intereses:</label>
+                <div class="intereses-options">
+                    <label><input type="checkbox" name="intereses" value="tecnología"> Tecnología</label>
+                    <label><input type="checkbox" name="intereses" value="negocios"> Negocios</label>
+                    <label><input type="checkbox" name="intereses" value="arte"> Arte</label>
+                </div>
+
+                <label for="horario">Horario preferido:</label>
+                <div class="horario-options">
+                    <label class="option-container">
+                        <input type="radio" name="horario" value="mañana" required>
+                        <span class="option-button">Mañana</span>
+                    </label>
+                    <label class="option-container">
+                        <input type="radio" name="horario" value="tarde">
+                        <span class="option-button">Tarde</span>
+                    </label>
+                    <label class="option-container">
+                        <input type="radio" name="horario" value="noche">
+                        <span class="option-button">Noche</span>
+                    </label>
+                </div>
+
+                <label for="fecha">Fecha del evento:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <span id="errorFecha" class="error-message"></span>  <label for="hora">Hora preferida:</label>
+                <input type="time" id="hora" name="hora" required>
+
+                <div class="custom-file-upload">
+                    <input type="file" id="archivo" name="archivo" class="hidden-file-input">
+                    <label for="archivo" class="custom-file-button">Elegir archivo</label>
+                    <span class="file-name-display">Ningún archivo seleccionado</span>
+                </div>
+
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="src/form.js"></script>
+</body>
+
+</html>

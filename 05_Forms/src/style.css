@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(179, 199, 255);    
+}
+
+.container {
+    width: 100%;
+    max-width: 50rem;
+    display: flex;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.banner {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-container {
+    width: 50%;
+    padding: 2rem;
+    background-color: hsl(220, 53%, 90%);
+    border-radius: 0 1rem 1rem 0;
+}
+
+.form-container h2{
+    margin-bottom: 1.5rem;
+    color: #4e4caf;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.3;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+label{
+    font-weight: bold;
+    
+}
+
+.intereses-options {
+    display: flex;
+    gap: 1rem; 
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+
+}
+
+.intereses-options > label{
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+}
+
+.intereses-options input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4e4caf; 
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.option-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.horario-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.option-container {
+    position: relative;
+    flex: 1;
+}
+
+.option-container input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.option-button {
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-button:hover {
+    background-color: #a3a2d8;
+}
+
+.option-container input[type="radio"]:checked + .option-button {
+    background-color: rgb(119, 117, 245);
+    color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+button[type="submit"] {
+    background-color: rgb(119, 117, 245);
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #9392d8;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.custom-file-upload {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.hidden-file-input {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.custom-file-button {
+  display: inline-block;
+  background-color: rgb(49, 48, 129);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+  text-align: center;
+}
+
+.custom-file-button:hover {
+  background-color: #9392d8;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.file-name-display {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+
+
+@media (max-width: 900px) {
+    .container {
+        max-width: 45rem;
+    }
+    
+    .form-container {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        background-color: hsl(220, 53%, 90%);
+        display: block;
+    }
+
+    .container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 2rem 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+        margin-bottom: 1.2rem;
+        padding: 0;
+    }
+
+    .intereses-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+    }
+
+    .horario-options {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    .option-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+        background-color: hsl(220, 53%, 90%);
+        display: block;
+    }
+
+    .container {
+        border-radius: 0;
+        box-shadow: none;
+        min-height: 100vh;
+    }
+
+    .form-container {
+        padding: 1.8rem 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin: 0.5rem 0 1.5rem 0;
+    }
+
+    form {
+        gap: 1.3rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"],
+    input[type="number"],
+    select {
+        padding: 0.6rem;
+    }
+
+    button[type="submit"] {
+        padding: 0.7rem;
+        font-size: 1rem;
+    }
+}
+
