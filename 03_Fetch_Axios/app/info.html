@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>ReadBooks</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="fetch-button">Fetch</a>
+        <h1>Read<span>Books</span></h1>
+        <a href="search.html" class="axios-button">Axios</a>
+    </header>
+    <main class="book-detail-container preload">
+        <section class="book-detail">
+            <div class="book-image-container">
+                <img id="book-image" src="" alt="Book Cover">
+            </div>
+            <div class="book-info-container">
+                <h1 id="book-title"></h1>
+                <h2 id="book-subtitle"></h2>
+                <p id="book-authors"></p>
+                <p id="book-description"></p>
+                
+                <p id="book-pages"></p>
+                <p id="book-year"></p>
+                <p id="book-publisher"></p>
+                
+                <div class="book-actions">
+                    <a id="download-btn" href="#" target="_blank"></a>
+                    <a href="index.html" class="back-button">Back to Books</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="src/scripts/info.js"></script>
+</body>
+</html>

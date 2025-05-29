@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #f5f5f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    background-color: #616469;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #30a1ec;
+}
+
+header span{
+    color: white;
+}
+
+
+.fetch-button {
+    background-color: #4a79cf;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.fetch-button:hover{
+    background-color: #5c8fb1;
+}
+
+.axios-button {
+    background-color: #4acfae;
+    color: #333;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.axios-button:hover{
+    background-color: #5cb18e;
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.container h2{
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 1rem;
+    color:  #6799c2;
+}
+
+#cardBooks{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.card{
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.card h2{
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem 0;
+    margin-bottom: 0.5rem;
+    color: #172966;
+    flex-grow: 1;
+}
+
+.card p{
+    padding: 0 1rem;
+    color: #333;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.card button{
+    background-color: #4f5872;
+    font-size: 1.05rem;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    margin: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover{
+    background-color: #5572af;
+}
+
+
+.book-detail-container{
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.book-detail{
+    display: flex;
+    flex-direction: column;
+    background: rgba(95, 95, 95, 0.151);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.book-image-container{
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #59586334;
+}
+
+.book-image-container img{
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.book-info-container {
+    flex: 1;
+    padding: 2rem;
+}
+
+.book-info-container h1{
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.book-info-container h2{
+    font-size: 1.2rem;
+    color: #0c585e;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.book-info-container p{
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.book-actions{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+#download-btn{
+    background-color: #63bd8a;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+#download-btn:hover{
+    background-color: #429667;
+}
+
+.back-button{
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.back-button:hover{
+    background-color: #2980b9;
+}
+
+.error-message{
+    text-align: center;
+    padding: 2rem;
+    color: #f19448;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    width: 100%;
+}
+
+.error-message h1{
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .book-detail {
+        flex-direction: row;
+    }
+}
+
+.book-detail-container.preload {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.book-detail-container.loaded {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+    transition: opacity 0.5s ease-out;
+}
+
+.book-detail-container.preload {
+    transition-delay: 0.1s;
+}
+
+.container.preload{
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.container.loaded{
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+    transition: opacity 0.5s ease-out;
+}
+
+.container.preload h2{
+    display: none;
+}
+
+.container.loaded h2{
+    display: block;
+    animation: fadeIn 0.5s ease-out 0.2s both;
+}
+
+@keyframes fadeIn{
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    max-width: 650px;
+    gap: 12px;
+    padding: 0 15px;
+}
+
+#searchInput{
+    flex: 1;
+    padding: 12px 15px; 
+    border: 2px solid #3a3a3a54;
+    border-radius: 6px;
+    font-size: 1.1rem; 
+}
+
+#searchBtn{
+    padding: 0 25px;
+    background-color:  #678cb6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    height: 48px; 
+}
+
+
+#searchBtn:hover{
+    background-color: #646e8a;
+}
+
+
+.message-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.message-content{
+    padding: 1.5rem 2rem;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.message-loading{
+    background-color: #65abb631;
+    color: #1b7ddf;
+    font-weight: 700;
+}
+
+.message-error{
+    background-color: #33333331;
+    color: #e6685a;
+}
+
+.message-empty{
+    background-color: #33333331;
+    font-weight: 700;
+}
+
+.books-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+
