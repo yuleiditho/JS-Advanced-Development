@@ -1,6 +1,6 @@
 # Formulario de Registro de Eventos
 
-[Live DEMO](hhttps://form-events-iota.vercel.app/)
+[Live DEMO](https://form-event02.vercel.app/)
 
 Formulario para registro de eventos con validaciones integradas.
 
